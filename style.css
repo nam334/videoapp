@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.main-div {
+  background-color: #d9e4ec;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.video-cont {
+  height: 80vh;
+  width: 70vw;
+  background-color: #d9e4ec;
+  border: 1.5rem solid white;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.action-cont {
+  height: 10rem;
+  width: 5rem;
+  background-color: white;
+  position: absolute;
+  top: calc((90vh - 10vh) / 2);
+  right: 5rem;
+  color: white;
+  gap: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.action-cont > * {
+  width: 100%;
+  height: 6rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capture-btn {
+  background-color: #a30000;
+  font-family: "Poppins", sans-serif;
+  padding: 0.8rem 3rem;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.record-btn {
+  background-color: #a30000;
+  font-family: "Poppins", sans-serif;
+  padding: 0.8rem 3rem;
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.record-btn:hover {
+  cursor: pointer;
+}
+.buttons {
+  z-index: 2;
+  display: flex;
+  gap: 1rem;
+}
+.scale-record {
+  animation-name: scale-record;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+.scale-capture {
+  animation-name: scale-capture;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+@keyframes scale-record {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scale-capture {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.timer-cont {
+  position: absolute;
+  bottom: 0;
+  left: 5rem;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.timer {
+  display: none;
+}
+
+.filter-cont {
+  position: absolute;
+  top: calc((100vh - 30rem) / 2);
+  left: 4rem;
+  height: 16rem;
+  width: 7rem;
+  background-color: transparent;
+  border-radius: 5px;
+
+  z-index: 2;
+}
+
+.filter {
+  height: 5rem;
+  margin-bottom: 1rem;
+  background-image: url("https://cdn.pixabay.com/photo/2023/07/27/18/57/beach-8153869_1280.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* background-color: yellow; */
+  background-blend-mode: color-burn;
+
+  /* background-color: #ffa50052; */
+}
+
+.orange {
+  background-color: rgba(210, 179, 122, 0.6);
+}
+.brown {
+  background-color: rgba(54, 120, 120, 0.8);
+}
+.pink {
+  background-color: rgba(247, 116, 9, 0.56);
+}
+.transparent {
+  background-color: transparent;
+}
+
+.filter-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+.material-icons {
+  color: #4392cc;
+  font-size: 3rem;
+  border: 1rem solid #094a7a;
+  border-radius: 3px;
+}
+
+.gallery {
+  position: absolute;
+  right: 6rem;
+  bottom: 7rem;
+  z-index: 4;
+}
+.gallery:hover {
+  cursor: pointer;
+}
